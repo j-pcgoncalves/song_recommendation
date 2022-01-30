@@ -108,14 +108,19 @@ def run_program():
 
     if instrument.title() == 'Acoustic Guitar':
         get_acoustic_song()
+        run_again()
     elif instrument.title() == 'Electric Guitar':
         get_electric_song()
+        run_again()
     elif instrument.title() == 'Bass':
         get_bass_song()
+        run_again()
     elif instrument.title() == 'Drums':
         get_drums_song()
+        run_again()
     elif instrument.title() == 'Piano':
         get_piano_song()
+        run_again()
 
 def run_again():
     print()
@@ -123,11 +128,13 @@ def run_again():
     if restart.title() == 'Yes' or restart.title() == 'Y':
         run_program()
     elif restart.title() == 'No' or restart.title() == 'N':
-        break
+        print()
+        print('Thank you for using my program! Have a nice day!')
+    
+
 
  
 run_program()
-run_again()
 
 
 
