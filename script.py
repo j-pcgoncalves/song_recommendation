@@ -7,6 +7,8 @@ bass = {'Beginner': ['\"Comfortably Numb\" by Pink Floyd', '\"She Loves You\" by
 drums = {'Beginner': ['\"Billie Jean\" by Michael Jackson', '\"You Shook Me All Night Long\" by AC/DC', '\"Run to the Hills\" by Iron Maiden', '\"Come as You Are\" by Nirvana', '\"Feel Good Inc\" by Gorillaz'], 'Intermediate': ['\"No One Knows\" by Queens of the Stone Age', '\"Immigrant Song\" by Led Zeppelin', '\"Get Lucky\" by Daft Punk', '\"Master of Puppets\" by Metallica', '\"Uptown Funk\" by Mark Ronson ft. Bruno Mars'], 'Advanced': ['\"La Villa Strangiato\" by Rush', '\"The Dance of Eternity\" by Dream Theater', '\"Moby Dick\" by Led Zeppelin', '\"Goliath\" by The Mars Volta', '\"A Night in Tunisia\" by Art Blakey and The Jazz Messengers']}
 piano = {'Beginner': ['\"Let it Be\" by The Beatles', '\"Yesterday\" by The Beatles', '\"Lean on Me\" by Bill Withers', '\"Where the Streets Have No Name\" by U2', '\"All Of Me\" by John Legend'], 'Intermediate': ['\"Fantasie-Impromptu (Op. 66)\" by Frédéric Chopin', '\"Elégie\" by Sergei Rachmaninoff', '\"Un Sospiro\" by Franz Liszt', '\"Je Te Veux\" by Erik Satie', '\"November from The Seasons (Op. 37a)\" by Pyotr Ilyich Tchaikovsky'], 'Advanced': ['\"Intermezzo (Op. 118 No. 2)\" by Johannes Brahms', '\"Serenade for the Doll, No. 2 from Children\'s Corner\" by Claude Debussy', '\"Song Without Words in F#minor (Op. 67 No. 2)\" by Felix Mendelssohn', '\"Prelude (Op. 3 No. 2)\" by Sergei Rachmaninoff', '\"Idyll\" by Mihály Zichy']}
 
+instruments = ['Acoustic Guitar', 'Electric Guitar', 'Bass', 'Drums', 'Piano']
+level_of_expertise = list(bass.keys())
 
 def run_program():
     print()
@@ -18,14 +20,13 @@ def run_program():
     instrument = input('What instrument do you feel like playing today? Acoustic Guitar, Electric Guitar, Bass, Drums or Piano? ')
     print()
     expertise = input('Which would you say is your level of expertise in said instrument? Beginner, Intermediate or Advanced? ')
-
+    
     def get_acoustic_song():
         if expertise.title() == 'Beginner':
             acoustic_songs = list(acoustic_guitar['Beginner'])
             random_song = random.choice(acoustic_songs)
             print()
             print('As a beginner you should try learning: ' + random_song + '.')
-        
         elif expertise.title() == 'Intermediate':
             acoustic_songs = list(acoustic_guitar['Intermediate'])
             random_song = random.choice(acoustic_songs)
@@ -130,22 +131,5 @@ def run_again():
     elif restart.title() == 'No' or restart.title() == 'N':
         print()
         print('Thank you for using my program! Have a nice day!')
-    
 
-
- 
 run_program()
-
-
-
-
-
-
-
-        
-
-    
-
-
-
-
