@@ -120,9 +120,15 @@ def run_program():
 def run_again():
     print()
     restart = input('Would you like to get another song? Yes or No?')
-    if 
+    if restart.title() == 'Yes' or restart.title() == 'Y':
+        run_program()
+    elif restart.title() == 'No' or restart.title() == 'N':
+        break
 
+ 
 run_program()
+run_again()
+
 
 
 
